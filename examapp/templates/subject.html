@@ -1,0 +1,17 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/examapp_styles.css' %}">
+
+<h1> Subject  </h1>
+<html>
+    <body>
+        <form>
+            <select name="subject">
+                <option> maths </option>
+                <option> python </option>
+            </select>
+            <input type="submit" value="Start Test" formaction="/examapp/starttest">
+        </form>
+    </body>
+</html>
+
+

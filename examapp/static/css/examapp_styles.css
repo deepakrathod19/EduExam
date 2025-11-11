@@ -1,0 +1,313 @@
+/* 
+ * ExamApp - Clean, Minimalistic Design
+ * Simple styling with modern colors
+ * FIXED: Full scrolling, no hidden content
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    padding-bottom: 60px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 20px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1, h2, h3 {
+    color: #06103d;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Input fields - Full width */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: #667eea;
+    background: white;
+}
+
+input[type="hidden"] {
+    display: none;
+}
+
+/* Buttons - Full width with proper spacing */
+input[type="submit"],
+button {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #667eea;
+    color: white;
+    transition: all 0.3s ease;
+    margin: 8px 0;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Radio buttons - Stacked vertically, full width */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.radio-option:hover {
+    border-color: #667eea;
+    background: #f0f4ff;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+    accent-color: #667eea;
+    flex-shrink: 0;
+}
+
+.radio-option span {
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+    flex-grow: 1;
+}
+
+/* Messages */
+.message {
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.message.info {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+/* Question display sections */
+.question-section {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.question-section label {
+    display: block;
+    font-weight: 600;
+    color: #667eea;
+    margin-bottom: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.question-section input[type="text"] {
+    background: white;
+    width: 100%;
+}
+
+.question-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.question-info input {
+    width: 100%;
+}
+
+/* Button group - Stack vertically */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.button-group input[type="submit"] {
+    width: 100%;
+    margin: 5px 0;
+}
+
+/* Tables - Proper scrolling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+}
+
+th {
+    background: #667eea;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tr:hover {
+    background: #f0f4ff;
+}
+
+/* Score display - Prominent and visible */
+.score-display {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #667eea;
+    text-align: center;
+    padding: 25px;
+    margin: 20px 0;
+    border: 3px solid #667eea;
+    border-radius: 12px;
+    background: #f0f4ff;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.4em;
+    }
+
+    input[type="submit"],
+    button {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group input[type="submit"] {
+        width: 100%;
+    }
+
+    .question-info {
+        flex-direction: column;
+    }
+
+    .radio-option {
+        padding: 12px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+/* Utility */
+.hidden {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
