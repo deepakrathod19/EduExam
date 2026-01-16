@@ -367,7 +367,7 @@ def startTest(request):
     return render(request,'examapp/templates/questionnavigation.html',{'question':listofquestions[0]})
 
 def endExam(request):
-    if 'op' in request.GET:
+    if 'op' in request.GET:  #op means = option
         allanswers=request.session['answer']
         allanswers[request.GET['qno']]=[request.GET['qno'],request.GET['qtext'],request.GET['answer'],request.GET['op']]
         #allanswer[1]=[1,2+2,4,6]
